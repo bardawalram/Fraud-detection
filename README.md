@@ -6,11 +6,12 @@ A machine learning-based web application that detects fraudulent financial trans
 
 ## 📌 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Model Details](#model-details)
-- [Dataset](#dataset)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Model Details](#-model-details)
+- [Dataset](#-dataset)
+
 ---
 
 ## 📖 Overview
@@ -31,30 +32,39 @@ The web application takes user input for transaction details and predicts whethe
 - 📁 Includes model training and analysis notebook (`analysis_model.ipynb`)
 
 ---
-##🛠️ Tech Stack
-- Language: Python 3.8+
--Libraries: - pandas
-            - scikit-learn
-            - joblib
-            - Streamlit
-Model: Machine learning classification model (e.g., RandomForest, XGBoost – depending on training in notebook)
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3.8+
+- **Libraries:**
+  - pandas  
+  - scikit-learn  
+  - joblib  
+  - Streamlit  
+- **Model:** Machine learning classification model (e.g., RandomForest, XGBoost – depending on training in notebook)
 
 ---
-##🧠 Model Details
-The machine learning model (fraud_detection_pipeline.pkl) was trained using features such as:
 
-type – Type of transaction (PAYMENT, TRANSFER, CASH_OUT, DEPOSIT)
+## 🧠 Model Details
 
-- amount – Amount of money transferred
-- oldbalanceOrg – Sender's balance before transaction
-- newbalanceOrig – Sender's balance after transaction
-- oldbalanceDest – Receiver's balance before transaction
-- newbalanceDest – Receiver's balance after transaction
+The machine learning model (`fraud_detection_pipeline.pkl`) was trained using the following features:
 
---
+- `type` – Type of transaction (e.g., PAYMENT, TRANSFER, CASH_OUT, DEPOSIT)
+- `amount` – Amount of money transferred
+- `oldbalanceOrg` – Sender's balance before transaction
+- `newbalanceOrig` – Sender's balance after transaction
+- `oldbalanceDest` – Receiver's balance before transaction
+- `newbalanceDest` – Receiver's balance after transaction
+
+The model is saved using `joblib` for fast loading and integrated with the `fraud_detection.py` Streamlit application.
+
+---
+
 ## 📂 Dataset
-The model was trained using the PaySim Fraud Detection Dataset from Kaggle.
-Dataset Info:
-Simulated mobile money transactions dataset
-6 million+ transactions
-Used for anomaly and fraud detection research
+
+The model was trained using the **[PaySim Fraud Detection Dataset](https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset?resource=download))** from Kaggle.
+
+**Dataset Info:**
+- Simulated mobile money transactions
+- Over 6 million records
+- Useful for anomaly and fraud detection research
