@@ -68,6 +68,4 @@ The model was trained using the **[PaySim Fraud Detection Dataset](https://www.k
 - Simulated mobile money transactions
 - Over 6 million records
 - Useful for anomaly and fraud detection research
-  ## Live Demo
-  Check out the live app
-  [click here](http://localhost:8501/).
+
